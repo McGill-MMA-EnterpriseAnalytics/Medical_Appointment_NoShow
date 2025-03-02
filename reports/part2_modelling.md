@@ -1,6 +1,6 @@
 # Modeling Section Report
 
-This report outlines the complete modeling workflow implemented in the [notebook]([https://github.com/YourRepo/graphs/propensity_score_distribution.png](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/notebooks/Models_v2.ipynb)) It covers data preprocessing for modeling, propensity score estimation, resampling with SMOTE, and the training and evaluation of several machine learning models including Logistic Regression (for propensity scoring), XGBoost (with Bayesian optimization), TabPFN, and AutoTabPFN. Detailed interpretations for responses and visualizations are provided, along with hyperlinks to the graphs stored in our GitHub repository.
+This report outlines the complete modeling workflow implemented in the [notebook](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/notebooks/Models_v2.ipynb). It covers data preprocessing for modeling, propensity score estimation, resampling with SMOTE, and the training and evaluation of several machine learning models including Logistic Regression (for propensity scoring), XGBoost (with Bayesian optimization), TabPFN, and AutoTabPFN. Detailed interpretations for responses and visualizations are provided, along with hyperlinks to the graphs stored in our GitHub repository.
 
 ---
 
