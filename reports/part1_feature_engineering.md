@@ -17,7 +17,7 @@ By integrating these techniques, we generate a refined dataset that improves dow
 ## **Data Preprocessing & Feature Engineering**
 
 ### **1. Data Ingestion & Temporal Feature Extraction**
-- The dataset is loaded from a CSV file ([Original_data.csv](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/Data/Original_Data.csv), ensuring robust error handling for data inconsistencies.
+- The dataset is loaded from a CSV file [Original_data.csv](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/Data/Original_Data.csv), ensuring robust error handling for data inconsistencies.
 - **Datetime fields (`ScheduledDay`, `AppointmentDay`)** are converted to datetime objects to enable rich feature extraction.
 - The following **temporal attributes** are derived:
   - **ScheduledMonth & AppointmentMonth**: Capture seasonal trends in patient appointments.
