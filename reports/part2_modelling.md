@@ -1,7 +1,6 @@
 # Modeling Section Report
 
-This report outlines the complete modeling workflow implemented in the [project](https://github.com/YourRepo/graphs/propensity_score_distribution.png) 
-It covers data preprocessing, propensity score estimation, resampling with SMOTE, and the training and evaluation of several machine learning models including Logistic Regression (for propensity scoring), XGBoost (with Bayesian optimization), TabPFN, and AutoTabPFN. Detailed interpretations for responses and visualizations are provided, along with hyperlinks to the graphs stored in our GitHub repository.
+This report outlines the complete modeling workflow implemented in the [notebook]([https://github.com/YourRepo/graphs/propensity_score_distribution.png](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/notebooks/Models_v2.ipynb)) It covers data preprocessing for modeling, propensity score estimation, resampling with SMOTE, and the training and evaluation of several machine learning models including Logistic Regression (for propensity scoring), XGBoost (with Bayesian optimization), TabPFN, and AutoTabPFN. Detailed interpretations for responses and visualizations are provided, along with hyperlinks to the graphs stored in our GitHub repository.
 
 ---
 
@@ -9,7 +8,7 @@ It covers data preprocessing, propensity score estimation, resampling with SMOTE
 
 ### Data Loading
 - **Data Import:**  
-  Training and test datasets are imported from CSV files (`train_processed_v4.csv` and `test_processed_v4.csv`). The target variable `No-show` is separated from the training features, and irrelevant identifiers (e.g., `PatientId`, `AppointmentID`) are removed to prevent data leakage.
+  Training and test datasets are imported from CSV files ([train_processed_v4.csv](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/Data/train_processed_v4.csv.zip) and [test_processed_v4.csv](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/Data/test_processed_v4.csv). The target variable `No-show` is separated from the training features, and irrelevant identifiers (e.g., `PatientId`, `AppointmentID`) are removed to prevent data leakage.
 
 ### Feature Identification and Transformation
 - **Preprocessing Pipeline:**  
@@ -29,14 +28,14 @@ This pipeline is fitted on the training set and then applied to both the trainin
 
 ### Purpose and Methodology
 - **Objective:**  
-  Estimate the likelihood (propensity score) of a patient not showing up, based on the input features.
+  Based on the input features, estimate the likelihood (propensity score) of a patient not showing up.
 - **Modeling Approach:**  
   A Logistic Regression model (with an extended iteration count for convergence) is used to compute these scores.
 
 ### Visualization and Interpretation
 - **Graph:**  
   The distribution of propensity scores, separated by the `No-show` label, is plotted using `seaborn`.  
-  - **Link to Graph:** [Propensity Score Distribution](https://github.com/YourRepo/graphs/propensity_score_distribution.png)
+  - **Link to Graph:** [Propensity Score Distribution](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/visualizations/propensity_score_distribution.png)
 - **Interpretation:**  
   The histogram shows distinct distributions for no-show and show groups. The mean propensity score for the no-show group is approximately 0.1867, while that for the show group is around 0.2630. This indicates that, on average, patients who do show up have higher propensity scores, which is consistent with the model's estimation mechanism.
 
@@ -45,7 +44,7 @@ This pipeline is fitted on the training set and then applied to both the trainin
 ## 3. Resampling with SMOTE for Classification
 
 - **SMOTE Application:**  
-  SMOTE is applied to the processed training data to balance the class distribution. The transformation yields a new training set (`X_train_cls` and `y_train_cls`) with an improved balance between classes.
+  SMOTE is applied to the processed training data to balance the class distribution. The transformation yields a new training set (`X_train_cls` and `y_train_cls`) with an improved class balance.
 
 ---
 
@@ -71,8 +70,8 @@ This pipeline is fitted on the training set and then applied to both the trainin
 
 ### Validation Curve
 - **Graph:**  
-  A validation curve displaying the mean F1 score over optimization iterations is generated.  
-  - **Link to Graph:** [XGBoost Validation Curve](https://github.com/YourRepo/graphs/xgboost_validation_curve.png)
+  A validation curve displaying the mean F1 score over 20 optimization iterations is generated.  
+  - **Link to Graph:** [XGBoost Validation Curve](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/visualizations/xgboost_validation_curve.png)
 
 ---
 
@@ -88,9 +87,10 @@ This pipeline is fitted on the training set and then applied to both the trainin
   - Additional weekday-related features.
 - **Graph:**  
   A bar plot of the top 20 most important features is generated.  
-  - **Link to Graph:** [Feature Importance Plot](https://github.com/YourRepo/graphs/feature_importance.png)
+  - **Link to Graph:** [Feature Importance Plot]([https://github.com/YourRepo/graphs/feature_importance.png](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/visualizations/feature_importance.png))
 - **Interpretation:**  
-  The feature importance analysis highlights that scheduling details and wait times are critical predictors in determining no-shows. This insight can inform both operational improvements and further feature engineering efforts.
+  From the feature importance plot, we can see that the scheduling date, appointment date, and weekday of the appointment play a crucial role in predicting no-show rates. Due to the nature of the XGBoost model, we cannot directly interpret the exact impact of these features on the target. However, further causal inference analysis could provide deeper insights into how these factors influence patient attendance.
+  Additionally, WaitTime and patient Age also significantly affect whether a patient is likely to show up for their appointment.
 
 ---
 
@@ -102,8 +102,6 @@ This pipeline is fitted on the training set and then applied to both the trainin
   - **Precision:** 0.3334  
   - **Recall:** 0.3725  
   - **F1-Score:** 0.3519
-- **Confusion Matrix and Classification Report:**  
-  Detailed outputs provide insights into model performance, especially in balancing the trade-offs between precision and recall.
 - **Interpretation:**  
   Although the accuracy is relatively high, the low precision and recall indicate that the model struggles to correctly identify no-show cases. This suggests further tuning or alternative approaches may be needed to better capture the nuances of the minority class.
 
@@ -126,9 +124,8 @@ This pipeline is fitted on the training set and then applied to both the trainin
   - **Precision:** 0.7790  
   - **Recall:** 0.6334  
   - **F1-Score:** 0.6696  
-  - **AUC-ROC:** Calculated for binary classification scenarios.
 - **Interpretation:**  
-  AutoTabPFN demonstrates a higher precision, suggesting that when it predicts a no-show, it is more likely to be correct. The balance between accuracy, recall, and F1-score indicates that AutoTabPFN is competitive, particularly in reducing false positives. A confusion matrix visualization (displayed using a Yellowbrick-like style) further aids in understanding the distribution of errors.
+  AutoTabPFN demonstrates a higher precision, suggesting that when it predicts a no-show, it is more likely to be correct. The balance between accuracy, recall, and F1-score indicates that AutoTabPFN is competitive, particularly in reducing false positives. 
 
 ---
 
