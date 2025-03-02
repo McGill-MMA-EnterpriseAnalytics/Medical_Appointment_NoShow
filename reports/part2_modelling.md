@@ -87,7 +87,7 @@ This pipeline is fitted on the training set and then applied to both the trainin
   - Additional weekday-related features.
 - **Graph:**  
   A bar plot of the top 20 most important features is generated.  
-  - **Link to Graph:** [Feature Importance Plot]([https://github.com/YourRepo/graphs/feature_importance.png](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/visualizations/feature_importance.png))
+  - **Link to Graph:** [Feature Importance Plot](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/visualizations/feature_importance.png)
 - **Interpretation:**  
   From the feature importance plot, we can see that the scheduling date, appointment date, and weekday of the appointment play a crucial role in predicting no-show rates. Due to the nature of the XGBoost model, we cannot directly interpret the exact impact of these features on the target. However, further causal inference analysis could provide deeper insights into how these factors influence patient attendance.
   Additionally, WaitTime and patient Age also significantly affect whether a patient is likely to show up for their appointment.
