@@ -2,7 +2,7 @@
 
 ## **Overview**
 
-This section of the project aims to enhance predictive modeling for medical appointment no-shows by leveraging advanced **feature engineering** and **unsupervised learning techniques**. Given that the dataset consists primarily of **categorical and binary variables**, we employ specialized feature transformations to maximize the predictive power of structured data. Our methodology includes:
+This [section of the project](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/notebooks/Feature_Engineering_v4.ipynb) aims to enhance predictive modeling for medical appointment no-shows by leveraging advanced **feature engineering** and **unsupervised learning techniques**. Given that the dataset consists primarily of **categorical and binary variables**, we employ specialized feature transformations to maximize the predictive power of structured data. Our methodology includes:
 
 - **Extracting temporal patterns** from scheduling and appointment timestamps
 - **Encoding categorical features efficiently** while preserving interpretability
@@ -17,7 +17,7 @@ By integrating these techniques, we generate a refined dataset that improves dow
 ## **Data Preprocessing & Feature Engineering**
 
 ### **1. Data Ingestion & Temporal Feature Extraction**
-- The dataset is loaded from a CSV file (Original_data.csv), ensuring robust error handling for data inconsistencies.
+- The dataset is loaded from a CSV file ([Original_data.csv](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/Data/Original_Data.csv), ensuring robust error handling for data inconsistencies.
 - **Datetime fields (`ScheduledDay`, `AppointmentDay`)** are converted to datetime objects to enable rich feature extraction.
 - The following **temporal attributes** are derived:
   - **ScheduledMonth & AppointmentMonth**: Capture seasonal trends in patient appointments.
@@ -56,8 +56,13 @@ Since the dataset is dominated by **categorical and binary features**, tradition
 - Unlike K-Means, which relies on numerical distance metrics, **KModes uses categorical similarity (mode matching)** to partition data into clusters.
 - **Implementation Steps**:
   - A **range of cluster sizes (K=2 to K=10)** is evaluated using the **cost function** (lower cost = better clustering).
-  - The optimal number of clusters (K=4) is identified using an **elbow method** based on the **rate of cost reduction**.
+  - The optimal number of [clusters (K=4)](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/visualizations/kmodes_clusters_visualization.png) is identified using an **elbow method** based on the **rate of cost reduction**.
   - Each patient is assigned a **KModes cluster label**, adding an **unsupervised categorical feature** to the dataset.
+- **KModes Cluster Interpretation**
+  Based on the [KModes cluster centers heatmap](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/visualizations/kmodes_cluster_centers.png), we observe the following:
+  - Cluster 2 represents an older population (Age = 66) with a significantly higher prevalence of hypertension.
+  - Cluster 3 shows a moderate age group (Age = 39) with higher SMS_received values, indicating more engagement with appointment reminders.
+  - Clusters 0 and 1 share similar characteristics with younger patients, likely reflecting a population less affected by chronic conditions but exhibiting varied no-show behaviors.
 
 ### **2. HDBSCAN: Density-Based Clustering with Bayesian Optimization**
 - Traditional clustering methods struggle with **varying-density** clusters, but HDBSCAN **dynamically adapts** to different density regions, making it highly effective for **binary and categorical data**.
