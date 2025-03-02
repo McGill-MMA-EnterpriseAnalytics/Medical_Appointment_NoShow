@@ -8,7 +8,7 @@ This report outlines the complete modeling workflow implemented in the [notebook
 
 ### Data Loading
 - **Data Import:**  
-  Training and test datasets are imported from CSV files ([train_processed_v4.csv](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/Data/train_processed_v4.csv.zip) and [test_processed_v4.csv](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/Data/test_processed_v4.csv). The target variable `No-show` is separated from the training features, and irrelevant identifiers (e.g., `PatientId`, `AppointmentID`) are removed to prevent data leakage.
+  Training and test datasets are imported from CSV files [train_processed_v4.csv](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/Data/train_processed_v4.csv.zip) and [test_processed_v4.csv](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/Data/test_processed_v4.csv). The target variable `No-show` is separated from the training features, and irrelevant identifiers (e.g., `PatientId`, `AppointmentID`) are removed to prevent data leakage.
 
 ### Feature Identification and Transformation
 - **Preprocessing Pipeline:**  
