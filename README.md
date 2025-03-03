@@ -30,7 +30,7 @@ This project is structured around three main components:
        - *KModes* clustering to capture categorical groupings.
        - *HDBSCAN* with Bayesian optimization to adapt to varying data densities.
    - **Learn More:**  
-     [Feature Engineering & Clustering Report](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/notebooks/Feature_Engineering_and_Clustering.ipynb)
+     [Feature Engineering & Clustering Report](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/reports/part1_feature_engineering.md)
 
 2. **Advanced Modeling with Bayesian Optimization**  
    - **Techniques:**  
@@ -40,7 +40,7 @@ This project is structured around three main components:
    - **Outcome:**  
      Highly optimized predictive models that accurately identify patients at risk of no-shows.
    - **Learn More:**  
-     [Modeling & Predictive Analytics Report](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/notebooks/Models_v2.ipynb)
+     [Modeling & Predictive Analytics Report](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/reports/part2_modelling.md)
 
 3. **Causal Inference Analysis**  
    - **Techniques:**  
@@ -50,7 +50,7 @@ This project is structured around three main components:
    - **Outcome:**  
      Robust estimates of the causal impact of SMS reminders on reducing no-show rates.
    - **Learn More:**  
-     [Causal Inference Analysis Report](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/notebooks/Casual_Inference_v5.ipynb)
+     [Causal Inference Analysis Report](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/reports/part3_causal_inference_conclusion.md)
 
 ---
 
