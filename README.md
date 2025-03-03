@@ -1,10 +1,5 @@
 # Medical Appointment No-Show Analysis
 
-## Literature Review
-Recent studies have underscored the multifaceted nature of medical appointment no-shows. For instance, research published in BMC Health Services Research ([Link](https://bmchealthservres.biomedcentral.com/articles/10.1186/s12913-023-10418-6)) highlights the role of socio-demographic and operational factors in missed appointments. Similarly, findings from ScienceDirect ([Link](https://www.sciencedirect.com/science/article/abs/pii/S0168851018300459)) emphasize the potential of system-level interventions, such as appointment reminder systems, to mitigate no-show rates. Complementary evidence from the National Institutes of Health ([Link](https://pmc.ncbi.nlm.nih.gov/articles/PMC7280239/)) demonstrates the cost-effectiveness and improved efficiency achieved through targeted patient communication strategies. Our project builds on this traditional research by integrating advanced feature engineering, unsupervised learning, Bayesian-optimized modeling, and robust causal inference techniques, offering a comprehensive, data-driven approach to both predict no-shows and understand the causal impact of interventions like SMS reminders.
-
----
-
 ## Business Impact and Project Importance
 
 Medical appointment no-shows lead to significant inefficiencies in healthcare systems, including wasted resources, lost revenue, and compromised patient outcomes. By accurately predicting and understanding no-show behavior, healthcare providers can optimize scheduling, improve resource utilization, and enhance patient care. This project addresses these challenges through an end-to-end analytical framework that leverages:
