@@ -1,6 +1,6 @@
 # Causal Inference Analysis: Impact of SMS Reminders on Medical Appointment No-Shows
 
-This report presents a comprehensive causal inference analysis investigating whether SMS reminders effectively reduce no-show rates for medical appointments. Advanced causal machine learning methods were applied to estimate both the average treatment effect (ATE) and heterogeneous treatment effects across various patient subgroups. The findings offer actionable insights for healthcare providers looking to optimize appointment attendance.
+This report presents a comprehensive [causal inference analysis](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/notebooks/Casual_Inference_v5.ipynb) investigating whether SMS reminders effectively reduce no-show rates for medical appointments. Advanced causal machine learning methods were applied to estimate both the average treatment effect (ATE) and heterogeneous treatment effects across various patient subgroups. The findings offer actionable insights for healthcare providers looking to optimize appointment attendance.
 
 ---
 
