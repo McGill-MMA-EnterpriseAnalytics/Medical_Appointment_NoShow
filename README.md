@@ -6,7 +6,7 @@ Medical appointment no-shows lead to significant inefficiencies in healthcare sy
 
 - **[Advanced Feature Engineering](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/reports/part1_feature_engineering.md):** Extracts and transforms temporal, categorical, and numerical data to enhance predictive power.
 - **[Unsupervised Learning](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/reports/part1_feature_engineering.md):** Utilizes clustering (KModes and HDBSCAN) to uncover latent group structures in patient behavior.
-- **[Bayesian Optimization in Modeling](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/reports/part2_modelling.md):** Fine-tunes predictive models like XGBoost for improved performance.
+- **[Bayesian Optimization & Advanced Modelling Techniquesx](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/reports/part2_modelling.md):** Fine-tunes predictive models like XGBoost and AutoTabPFN for improved performance.
 - **[Robust Causal Inference](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/reports/part3_causal_inference_conclusion.md):** Employs Double Machine Learning and meta-learning techniques to estimate the impact of SMS reminders on no-show rates.
 
 **Key Business Benefits:**
@@ -51,3 +51,7 @@ This project is structured around three main components:
      Robust estimates of the causal impact of SMS reminders on reducing no-show rates.
    - **Learn More:**  
      [Causal Inference Analysis Report](https://github.com/McGill-MMA-EnterpriseAnalytics/Medical_Appointment_NoShow/blob/main/notebooks/Casual_Inference_v5.ipynb)
+
+---
+
+To evaluate this project, please review the reports in the "reports" folder, starting with Part 1 through Part 3. The corresponding notebooks are linked in the "notebooks" folder for your convenience.
