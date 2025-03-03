@@ -177,7 +177,7 @@ SHAP analysis was performed to understand which features contribute most to the 
 - **Robustness:**  
   Placebo tests confirmed that the estimated effects are robust, as randomized treatment labels yielded near-zero ATE estimates.
 
-### Recommendations
+## 7. Recommendations
 1. **Targeted Interventions:**  
    Focus SMS reminder strategies on patient subgroups that exhibit stronger treatment effects (e.g., adults, elderly, and those with longer wait times).
 2. **Enhanced Personalization:**  
@@ -187,7 +187,7 @@ SHAP analysis was performed to understand which features contribute most to the 
 4. **Monitoring and Feedback:**  
    Establish continuous monitoring systems to track the long-term effectiveness of SMS reminders and adjust strategies based on ongoing performance data.
 
-## 7. Threats to Validation
+## 8. Threats to Validation
 
 ### Selection Bias
 
